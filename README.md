@@ -43,17 +43,30 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+module fulladdsubb(a,b,cin,sum,carry,BO,DIFF);
+input a,b,cin;
+output sum,carry,BO,DIFF;
+assign sum = (a ^ b ^ cin);
+assign cout = (a & b) | (b & cin) | (a & cin);
+//Write syntax for full adder sum and carry in date flow modelling 
+assign DIFF = a ^ b ^ cin;
+assign BO =  (~a & b) | (~(a ^ b) & cin);
+//Write syntax for full subtractor Borrow and Difference in date flow modelling
+endmodule
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: Afifa A
+RegisterNumber:212223040008
 */
 
 **RTL Schematic**
+![Screenshot 2024-03-19 143153](https://github.com/afifa17112005/FULL_ADDER_SUBTRACTOR/assets/147080931/98b2683e-cb71-46ca-a96e-c1d4b77806e3)
 
 **Output Timing Waveform**
+![Screenshot 2024-03-19 143116](https://github.com/afifa17112005/FULL_ADDER_SUBTRACTOR/assets/147080931/8f0c4ac0-0e51-4d28-96c7-39ac6dd11e18)
 
 **Result:**
 
-Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
+program implemented Full-Adder-and-Full-Subtractor-circuits successfully executed
 
 
 
