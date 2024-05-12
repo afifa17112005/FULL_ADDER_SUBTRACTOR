@@ -43,6 +43,7 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+```
 module fulladdsubb(a,b,cin,sum,carry,BO,DIFF);
 input a,b,cin;
 output sum,carry,BO,DIFF;
@@ -53,6 +54,7 @@ assign DIFF = a ^ b ^ cin;
 assign BO =  (~a & b) | (~(a ^ b) & cin);
 //Write syntax for full subtractor Borrow and Difference in date flow modelling
 endmodule
+```
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: Afifa A
 RegisterNumber:212223040008
